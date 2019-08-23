@@ -22,9 +22,8 @@ def register(request):
         else:
             for msg in form.error_messages:
                 print(form.error_messages[msg])
-    
-    form = UserRegisterForm
-    return render(request, 'register.html', context={'form': form})
+
+    return render(request, 'register.html', context={})
 
 def logout_request(request):
     logout(request)
